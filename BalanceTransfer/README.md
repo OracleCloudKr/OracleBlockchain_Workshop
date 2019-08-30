@@ -1,12 +1,12 @@
 # 샘플 체인코드 배포 및 테스트 (Balance Transfer) #
 -----
 ## 사전 준비사항 ##
-+ Oracle Cloud Trial Account ([Trial 계정 신청하기](http://www.oracloud.kr/post/oracle_cloud_trial_universal/))
-+ 이전 Lab인 CarDealer Lab을 완료하거나, BlockChain Cloud Service에서 Provisioning한 인스턴스 필요
++ Oracle Blockchain Platform Ip Address - 강사 제공
++ 이전 Lab인 CarDealer Lab을 완료하거나, BlockChain Platform에서 생성한 인스턴스 필요
 
 ## 소개 ##
 
-Oracle BlockChain Cloud 에는 체인코드를 바로 테스트 해볼 수 있는 **Sample**을 제공하고 있습니다. 이를 활용해서 테스트를 해보도록 하겠습니다.
+Oracle BlockChain Platform 에는 체인코드를 바로 테스트 해볼 수 있는 **Sample**을 제공하고 있습니다. 이를 활용해서 테스트를 해보도록 하겠습니다.
 이번에 테스트하는 Sample은 **Balance Transfer**라는 샘플입니다.
 A와 B 두 사람의 계좌에 잔고(balance)를 조회하고, 계좌이체를 하는 간단한 샘플입니다.
 
