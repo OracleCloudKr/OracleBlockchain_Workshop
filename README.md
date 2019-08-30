@@ -1,17 +1,14 @@
 # 오라클 Blockchain Workshop
 
 ## 소개 ##
-이 워크샵은 Oracle 블록체인 플랫폼을 통해 데모 환경을 구성하고 직접 블록체인 코드를 개발하고 배포를 경험해 볼 수 있는 Hands-on 워크샵입니다.
-블록체인 환경 구성과 스마트컨트랙트를 개발 해봄으로써 블록체인이 기업환경에서 어떤 식으로 적용할 수 있을 지를 직접 체험할 수 있게 해줍니다.
+이 워크샵은 Oracle 블록체인 플랫폼을 통해 환경을 구성하고 직접 블록체인 코드의 개발과 배포를 경험해 볼 수 있는 Hands-on 워크샵입니다.
+블록체인 네트워크의 구성과 스마트컨트랙트를 개발 해봄으로써 블록체인이 기업환경에서 어떤 식으로 적용할 수 있을 지를 직접 체험할 수 있게 해줍니다.
 
 ![Alt text](https://monosnap.com/image/u5jqpRbcB4HjU15gUXMZoAOPlKDeQK.png)
 
 # Prerequisite 
-이 핸즈온을 수행하려면 Oracle Autonomous Blockchain Cloud에 액세스 해야 합니다. Oracle Cloud 계정을 가지고 계시지 않다면 아래 방법에 따라 무료 계정을 받으세요. 
-Oracle Blockchain Cloud 서비스가 가용한 Data Center Region를 확인하고, 계정 신청 시에 해당 Region을 선택해야 서비스를 이용할 수 있습니다. 현재는 North America(US)로 선택하시면 됩니다.
-
-* [Trial 계정 신청하기](http://www.oracloud.kr/post/oracle_cloud_trial_universal/)
-* [가용한 데이터 선터 Region 확인하기](https://cloud.oracle.com/en_US/data-regions)
+* 이 핸즈온을 수행하려면 미리 준비되어 있는 Oracle Blockchain Platform의 IP Address가 필요합니다. 만약 IP Address를 받지 못한 경우에는 강사에게 요청하시기 바랍니다.
+* Postman 툴 ([다운로드](https://www.getpostman.com/apps))
 
 ## Oracle 블록체인 Lab (Car Dealer Network) ##
 [Lab 100 Car Dealer Lab](./CarDealerLab)
