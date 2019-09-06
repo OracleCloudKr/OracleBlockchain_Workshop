@@ -37,7 +37,7 @@ Body: {
     <code>
         {
         "key": "resturl",
-        "value": "<B>xxxxx</B>.sub.obpvcn.oraclevcn.com:10001/restproxy",
+        "value": "<B>xxxxx.sub.obpvcn.oraclevcn.com:10001/restproxy</B>",
         "description": "",
         "enabled": true
         },
@@ -64,7 +64,7 @@ Body: {
 CarTrace 체인코드를 실행하고 기존 Ledger 내의 정보를 확인하기 위해 Dashboard 역할을 수행하는 Sample Web Application이 필요합니다.
 1. 먼저 아래 링크에서 애플리케이션을 다운로드 받으세요.
 
-    [cardealer_webapp.zip](https://github.com/OracleCloudKr/OracleBlockchain_Workshop/raw/master/CarDealerLab/artifacts/cardealer_webapp.zip)
+    [auto_webapp.zip](https://github.com/OracleCloudKr/OracleBlockchain_Workshop/raw/master/CarDealerLab/artifacts/auto_webapp.zip)
 
 
 3. application을 배포하도록 하기 위해 Oracle Cloud Dashboard의 상단의 햄버거 모양을 클릭한 후 왼쪽 메뉴에서 Application Container를 클릭합니다.
