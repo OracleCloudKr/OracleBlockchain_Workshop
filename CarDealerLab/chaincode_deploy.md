@@ -4,7 +4,7 @@
 
 이 Lab에서 사용하는 Chaincode는 golang (GO) 으로 작성 되었으며, 미리 준비된 carTrace.zip를 이용하여 Deploy를 수행하게 됩니다.
 
-[carTrace.zip 다운로드](https://github.com/OracleCloudKr/OracleBlockchain_Workshop/raw/master/CarDealerLab/artifacts/carTrace.zip)
+[carTrace.go.zip 다운로드](https://github.com/OracleCloudKr/OracleBlockchain_Workshop/raw/master/CarDealerLab/artifacts/carTrace.go.zip)
 
 ### A. Founder에 체인코드 인스톨 & 초기화 
 
