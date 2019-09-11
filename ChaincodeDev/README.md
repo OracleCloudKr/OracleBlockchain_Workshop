@@ -1,12 +1,11 @@
 # ChainCode 개발하기 #
 -----
 ## 사전 준비사항 ##
-+ Oracle Cloud Trial Account ([Trial 계정 신청하기](http://www.oracloud.kr/post/oracle_cloud_trial_universal/))
-+ 이전 Lab인 CarDealer Lab을 완료하거나, BlockChain Cloud Service에서 Provisioning한 인스턴스 필요
++ 이전 Lab인 CarDealer Lab을 완료하거나, BlockChain Platform에서 Provisioning한 인스턴스 필요
 + 개발 툴 ([Visual Studio Code](https://code.visualstudio.com/))
 
 ## 소개 ##
-이번 Lab에서는 체인코드를 개발하는 방법에 대해 학습하고 간단한 체인코드를 개발해서 Oracle Blockchain Cloud Service에 배포하는 과정을 실습합니다.
+이번 Lab에서는 체인코드를 개발하는 방법에 대해 학습하고 간단한 체인코드를 개발해서 Oracle Blockchain Platform에 배포하는 과정을 실습합니다.
 
 ## Hyperledger Chaincode 시작하기
 
@@ -14,8 +13,8 @@
 
 ## Chaincode란?
 
-Chaincode는 Hyperleger위에 돌아가는 SmartContract 코드로서 Ledger를 저장할 때 비지니스 로직을 실행하게 할 수 있습니다. Chaincode는 Transaction에서 Ledger를 쿼리하거나 Update하기 위해 호출됩니다.
-현재 Oracle ABCS 는 Hyperledger 1.1 버전과 호환되며, 지원되는 언어는 Go와 Node.js 입니다. (Java 도 지원 예정)
+Chaincode는 Hyperleger위에 돌아가는 SmartContract 코드로서 Ledger에 접근할 때 비지니스 로직을 실행하게 할 수 있습니다. Chaincode는 Transaction에서 Ledger를 쿼리하거나 Update하기 위해 호출됩니다.
+현재 Oracle Blockchain Platform 19.3.2 는 Hyperledger 1.4.1 버전과 호환되며, 지원되는 언어는 Go와 Node.js, Java 입니다.
 
 ## Chaincode API란?
 Chaincode 프로그램은 Chaincode 인터페이스를 구현해야 합니다.
@@ -34,7 +33,7 @@ Chaincode 프로그램은 Chaincode 인터페이스를 구현해야 합니다.
 
     [개발 환경 준비하기](prepare_dev_env.md)
 
-1. chaincode package 설치
+2. chaincode package 설치
    
    아래 명령어를 command에서 실행해서 go에서 사용할 chaincode package를 다운로드 합니다.
 
