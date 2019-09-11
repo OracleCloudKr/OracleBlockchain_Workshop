@@ -37,7 +37,7 @@ Chaincode 프로그램은 Chaincode 인터페이스를 구현해야 합니다.
    
    아래 명령어를 command에서 실행해서 go에서 사용할 chaincode package를 다운로드 합니다.
 
-    | go get -u github.com/hyperledger/fabric/core/chaincode/shim |
+    | go get github.com/hyperledger/fabric/core/chaincode |
     | --- |
 
 ## Simple Asset Chaincode 작성하기
@@ -55,10 +55,9 @@ Chaincode 프로그램은 Chaincode 인터페이스를 구현해야 합니다.
     <pre></code>
     package main
     import (
-    "fmt"
-
-    "github.com/hyperledger/fabric/core/chaincode/shim"
-    "github.com/hyperledger/fabric/protos/peer"
+        "fmt"
+	    "github.com/hyperledger/fabric/core/chaincode/shim"
+	    "github.com/hyperledger/fabric/protos/peer"
     )
     // 저장하기 위한 구조체인 asset을 관리하기 위한 간단한 체인코드 
     type SimpleAsset struct {
@@ -87,14 +86,14 @@ Chaincode 프로그램은 Chaincode 인터페이스를 구현해야 합니다.
     <pre>
     func (t *SimpleAsset) Init(stub shim.ChaincodeStubInterface) peer.Response {
       <b>args := stub.GetStringArgs()</b>
-      if len(args) != 2 {
+      if len(args) != 3 {
         return shim.Error("Incorrect arguments. Expecting a key and a value")
       }
 
       // PutState를 호출하여 ledger에 key/value를 저장
-      err := <b>stub.PutState</b>(args[0], []byte(args[1]))
+      err := <b>stub.PutState</b>(args[1], []byte(args[2]))
       if err != nil {
-        return shim.Error(fmt.Sprintf("Failed to create asset: %s", args[0]))
+            return shim.Error(fmt.Sprintf("Failed to create asset: %s", args[1]))
       }
       return shim.Success(nil)
     }
@@ -191,10 +190,9 @@ Chaincode 프로그램은 Chaincode 인터페이스를 구현해야 합니다.
     package main
 
     import (
-        "fmt"
-
-        "github.com/hyperledger/fabric/core/chaincode/shim"
-        "github.com/hyperledger/fabric/protos/peer"
+    "fmt"
+    	"github.com/hyperledger/fabric/core/chaincode/shim"
+	    "github.com/hyperledger/fabric/protos/peer"
     )
 
     type SimpleAsset struct {
@@ -297,41 +295,41 @@ ok  	/Users/user1/Workshop/Blockchain_Workshop/ChaincodeDev	0.026s
 Success: Tests passed.
 </code></pre>
 
-## Chaincode OABCS에 배포
+## Chaincode를 OBP(Oracle Blockchain Platform) 에 배포
 
-위와 같이 정상적으로 테스트가 끝나면 OABCS에 체인코드를 배포할 수 있습니다.
-OABCS는 .go 파일을 zip으로 압축해서 배포하면 됩니다.
+위와 같이 정상적으로 테스트가 끝나면 OBP에 체인코드를 배포할 수 있습니다.
+OBP는 .go 파일을 zip으로 압축해서 배포하면 됩니다.
 
 1. 먼저 sacc.go 파일을 zip으로 압축합니다.
 
-2. OABCS 의 콘솔에 접속합니다.
-
-   이전 Lab에서 만든 detriot 인스턴스의 Dashboard Console로 이동합니다.
-![](../CarDealerLab/images/create_instance2.png)
-
-1. Chaincodes 탭으로 이동한 후 'Deploy a New Chaincode' 버튼을 클릭합니다.
+2. OBP 인스턴스 콘솔에 접속한 후 Chaincodes 탭으로 이동해서 'Deploy a New Chaincode' 버튼을 클릭합니다.
 
     ![](images/deploy1.png)
     
-1. Deploy Chaincode에서 이번에는 Quick Deployment를 사용해서 바로 Deploy를 선택합니다.
+3. Deploy Chaincode에서 Advanced Deploy를 선택합니다.
    
-   이 옵션을 선택하게 되면 Deploy함과 동시에 모든 peer 에 대해서 instantiate까지 한번에 해주게 됩니다.
-
     ![](images/deploy2.png)
 
-1. 아래 화면과 동일하게 선택,입력하고, 초기 파라미터로 ["a", "100"] 을 입력합니다. 
+4. 아래 화면과 동일하게 선택,입력하고, 초기 파라미터로 ["a", "100"] 을 입력합니다. 
     
     앞에서 압축한 chaincode zip 파일을 선택합니다.
 
     ![](images/deploy3.png)
 
-1. submit을 누르면 정상적으로 Deploy가 완료되고 Instantiate가 되게 됩니다.
+5. submit을 누르면 정상적으로 Deploy가 완료되고 Instantiate가 되게 됩니다.
    
 ## Chaincode REST로 호출하기
 이제 Deploy된 체인코드를 REST Api를 통해 호출해 보도록 하겠습니다.
 1. Postman을 다시 열고 좌측 메뉴에서 기존 Request들 중에 마지막에 있는 Query Vehicle을 선택하고 Duplicate를 해서 복사를 합니다.
    ![](images/restcall1.png)
-2. 이름을 Query sacc로 변경하고 Body를 클릭한 후 아래의 값으로 입력합니다.
+2. 내용을 다음과 같이 수정합니다.
+   채널이름 변경: URL에 default로 변경
+   body 입력 값 변경 : <br>
+    {<br>
+	    "chaincode":"sacc",<br>
+	    "args":["get", "a"]<br>
+    }
+   
    ![](images/restcall2.png)
 3. Send 버튼을 클릭하면 체인코드가 호출이 되고 앞에서 체인코드 초기화 때 입력한 100 값이 반환되는 것을 확인할 수 있습니다.
 

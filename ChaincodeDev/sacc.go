@@ -16,15 +16,14 @@ type SimpleAsset struct {
 // or to migrate data.
 func (t *SimpleAsset) Init(stub shim.ChaincodeStubInterface) peer.Response {
 	// Get the args from the transaction proposal
-	args := stub.GetStringArgs()
-	// args[0] : function name
-	//fn, args := stub.GetFunctionAndParameters()
 
+	args := stub.GetStringArgs()
 	if len(args) != 3 {
 		return shim.Error("Incorrect arguments. Expecting a key and a value")
 	}
 
 	// Set up any variables or assets here by calling stub.PutState()
+
 	// We store the key and the value on the ledger
 	err := stub.PutState(args[1], []byte(args[2]))
 	if err != nil {

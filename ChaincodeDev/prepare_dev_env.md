@@ -5,11 +5,11 @@
 
 https://hyperledger-fabric.readthedocs.io/en/master/chaincode4ade.html 참고
 
-이번 Lab에서는 Hyperledger를 설치하지 않고 더 간단하게 테스트 하는 MockStub을 이용해 테스트하는 환경을 준비할 에정입니다. MockStub은 다소 제약사항이 있긴 하지만 간단하게 테스트 하는 목적으로 이용하기에는 좋습니다. |
+이번 Lab에서는 Hyperledger를 설치하지 않고 더 간단하게 테스트 하는 MockStub을 이용해 테스트하는 환경을 준비할 예정입니다. MockStub은 다소 제약사항이 있긴 하지만 간단하게 테스트 하는 목적으로 이용하기에는 좋습니다. |
 | --- |
 
 ### 1. 개발 툴 설치
-Visual Studio Code는 아래의 링크에서 다운로드 받으실 수 있습니다.
+Visual Studio Code는 아래의 링크에서 다운로드 받으실 수 있습니다.<br>
 ([Visual Studio Code](https://code.visualstudio.com/))
 
 ![](images/vscode.png)
