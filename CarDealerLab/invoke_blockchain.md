@@ -92,20 +92,20 @@
 
 
 
-1. "Vehicle Trace Dashboard"를 열고 **transfer**탭을 선택하여 트랜잭션을 실행하십시오.
+2. "Vehicle Trace Dashboard"를 열고 **transfer**탭을 선택하여 트랜잭션을 실행하십시오.
    이전 Lab에서 Postman으로 초기화 작업을 수행하여 챠량번호 dtrt10001인 차량은 현재 Detroit Auto의 소유가 되어 있습니다. 
     **Detroit Auto**에서 **samdealer**로 **dtrt10001**를 전송해 보겠습니다.
 
-2. 사용자 이름 **DetroitAuto**와 아무 비밀번호나 넣고 로그인하십시오.
+3. 사용자 이름 **DetroitAuto**와 아무 비밀번호나 넣고 로그인하십시오.
     ![](images/transfer1.png)
 
-3. 차량 번호로 **dtrt10001**을 입력하십시오(Chassis number of a vehicle). 
-    Vehicle **new owner**로 **DetroitAuto**를 입력하십시오. 
+4. 차량 번호로 **dtrt10001**을 입력하십시오(Chassis number of a vehicle). 
+    Vehicle **new owner**로 **SamDealer**를 입력하십시오. 
     그런 다음 **Transfer Vehicle** 버튼을 클릭하십시오.
     ![](images/transfer3.png)
 
-3. 다시 Trace 탭으로 이동해서 **dtrt10001** 를 조회해서 해당 차량의 Transaction History를 확인할 수 있습니다. <br>
-   owner가 samdealer로 변경되었고, Transaction도 새롭게 하나 더 추가된 것을 확인할 수 있습니다.<br>
+5. 다시 Trace 탭으로 이동해서 **dtrt10001** 를 조회해서 해당 차량의 Transaction History를 확인할 수 있습니다. <br>
+   owner가 **samdealer**로 변경되었고, Transaction도 새롭게 하나 더 추가된 것을 확인할 수 있습니다.<br>
    오른쪽의 API Details에서와 같이 API 호출 시에 JSON 형태로 History 데이터가 반환되는 것을 확인할 수 있습니다.
    ![](images/transfer4.png)
 
