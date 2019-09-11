@@ -323,8 +323,8 @@ OBP는 .go 파일을 zip으로 압축해서 배포하면 됩니다.
 1. Postman을 다시 열고 좌측 메뉴에서 기존 Request들 중에 마지막에 있는 Query Vehicle을 선택하고 Duplicate를 해서 복사를 합니다.
    ![](images/restcall1.png)
 2. 내용을 다음과 같이 수정합니다.
-   채널이름 변경: URL에 default로 변경
-   body 입력 값 변경 : <br>
+   1) URL에 채널이름을 default로 변경하여 다음과 같이 수정 : https://{{resturl}}/api/v2/channels/default/chaincode-queries
+   2) body 입력 값 변경 : <br>
     {<br>
 	    "chaincode":"sacc",<br>
 	    "args":["get", "a"]<br>
