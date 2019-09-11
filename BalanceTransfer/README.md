@@ -18,28 +18,24 @@ A와 B 두 사람의 계좌에 잔고(balance)를 조회하고, 계좌이체를 
 
 DetroitAuto의 Dashboard Console에 접속해서 메뉴중에 **Developer Tools**를 클릭합니다.
 여기에서는 Chaincode 개발에 도움이 되는 오라클 Document에 대한 Link와 설명을 제공합니다.
-![](images/balance_trans1.png)
 
 왼쪽 메뉴에서 **Samples**를 클릭합니다.
 바로 테스트 해볼 수 있는 Sample인 Balance Transfer와 Car Dealer를 제공하고 있습니다.
 이번 Lab에서는 **Balance Transfer**를 테스트 할 예정입니다.
 **Install** 버튼을 클릭해서 바로 샘플 체인코드를 배포해 보도록 하겠습니다.
-![](images/balance_trans2.png)
 
 배포할 Peer를 모두 선택합니다.
-
-![](images/balance_transfer3.png)
+![](images/balance_trans1.png)
 
 배포할 채널을 **default**로 선택합니다.
 
 이 체인코드는 처음 **Instantiate(객체화)** 될때 초기값을 입력받도록 작성되었는데, A와 B의 계좌잔고를 세팅하기 위해 **Int** 값을 초기에 입력받습니다. (예: A: 100, B: 200)
+![](images/balance_trans2.png)
 
-REST Proxy를 선택하고 **Instantiate and Enable in REST Proxy** 버튼을 클릭합니다.
-
-![](images/balance_transfer4.png)
 
 invoke 버튼을 누른 후 퍕업창에서 Channel을 선택하고 Action명을 **Query A**로 선택해서 A의 잔고값을 조회합니다.
 초기에 입력한 A의 값이 조회되는 것을 확인하실 수 있습니다.
+![](images/balance_trans3.png)
 
 ![](images/balance_transfer5.png)
 
