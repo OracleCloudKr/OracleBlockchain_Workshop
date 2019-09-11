@@ -21,9 +21,9 @@ Body: {
 
 이번 Lab에서는 Postman툴([다운로드](https://www.getpostman.com/apps))을 통해 REST API들을 자동화해서 호출하는 방식으로 하게 됩니다.
 
-1. 먼저 detroitauto(Founder)에서 REST Proxy주소를 복사해 둡니다. 
-   아래 그림에서 가운데 붉은색으로 표시된 부분만 복사를 합니다. 
-    ![](images/init_ledger1.png)
+1. 먼저 DetroitAuto(Founder)의 Nodes 탭에서 REST Proxy주소를 복사해 둡니다. 
+   아래 그림에서 https://를 제외한 가운데 붉은색으로 표시된 부분만 복사를 합니다. 
+    ![](images/restapi_url.png)
 
 2. 데이터를 초기화하는 Postman 스크립트 파일은 아래의 주소에서 다운로드 합니다.
 
