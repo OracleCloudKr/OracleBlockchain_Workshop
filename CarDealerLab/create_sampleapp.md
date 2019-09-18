@@ -25,7 +25,7 @@ Body: {
    아래 그림에서 https://를 제외한 가운데 붉은색으로 표시된 부분만 복사를 합니다. 
     ![](images/restapi_url.png)
 
-2. 데이터를 초기화하는 Postman 스크립트 파일은 아래의 주소에서 다운로드 합니다.
+2. 데이터를 초기화하는 Postman 스크립트 파일은 아래의 주소에서 로컬 컴퓨터에 다운로드 합니다.
 
     [OBP_Workshop.postman_collection.json](https://github.com/OracleCloudKr/OracleBlockchain_Workshop/raw/master/CarDealerLab/artifacts/OBP_Workshop.postman_collection.json)
 
