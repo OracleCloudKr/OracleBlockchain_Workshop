@@ -66,4 +66,4 @@
 ![](images/obp_create_participant2_3.png)
 
 ---
-[이전 Lab으로 이동](README.md)
+[이전 Lab으로 이동](../README.md)
