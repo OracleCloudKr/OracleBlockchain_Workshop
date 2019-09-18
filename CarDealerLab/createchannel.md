@@ -20,9 +20,10 @@
 ![](images/create_newchannel2.png)
 
 4. JudeChannel도 생성합니다.
+
 ![](images/create_newchannel3.png)
 
-5. 두 개의 채널을 모두 생성 한 후에 다음 단계로 넘어갑니다.
+1. 두 개의 채널을 모두 생성 한 후에 다음 단계로 넘어갑니다.
 
 ## B. Participant(딜러) nodes에서 채널에 참가하기 (**JudeDealer** 먼저 수행합니다.)
 앞에서 만든 채널은 Founder쪽에 각각의 딜러들이 참여할 수 있다는 정보만을 입력한 것이므로 현재는 아직 참여가 되어 있지 않은 상태로, Detroit Auto의 피어 노드만 포함되어 있습니다. 딜러들은 참여하는 Peer가 없으므로 이 채널에서 트랜잭션을 만들거나 트랜잭션을 볼 수 없습니다.

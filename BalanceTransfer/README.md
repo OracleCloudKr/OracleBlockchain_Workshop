@@ -29,7 +29,8 @@ DetroitAuto의 Dashboard Console에 접속해서 메뉴중에 **Developer Tools*
 
 배포할 채널을 **default**로 선택합니다.
 
-이 체인코드는 처음 **Instantiate(객체화)** 될때 초기값을 입력받도록 작성되었는데, A와 B의 계좌잔고를 세팅하기 위해 **Int** 값을 초기에 입력받습니다. (예: A: 100, B: 200)
+이 체인코드는 처음 **Instantiate(객체화)** 될때 초기값을 입력받도록 작성되었는데, A와 B의 계좌잔고를 세팅하기 위해 **Int** 값을 받습니다. (예: A: 100, B: 200)
+
 ![](images/balance_trans2.png)
 
 
