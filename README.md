@@ -11,7 +11,7 @@
 * Postman 툴 ([다운로드](https://www.getpostman.com/apps))
 
 ## 1. 블록체인 인스턴스 생성하기
-[Lab 100. 오라클 블록체인 인스턴스 생성하기 ](./CreateInstance)
+[Lab 100. 오라클 블록체인 인스턴스 생성하기 ](./Provisioning)
 
 ## 2. 체인코드 배포 해보기
 [Lab 200. 체인코드 배포 및 테스트 (Balance Transfer)](./BalanceTransfer)

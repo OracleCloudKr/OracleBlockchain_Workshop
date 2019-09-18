@@ -4,7 +4,7 @@
 강사로 부터 개별로 전달 받은 IP는 Oracle Blockchain Platform EE(Enterprise Edition) 버전이 설치되어 있는 IP 입니다. EE 버전은 On-Premise에 설치해서 사용할 수 있는 버전으로 Cloud 버전과 거의 유사한 화면을 갖고 있습니다. 이 Lab에서는 EE버전을 사용할 예정입니다.
 
 1. OBP(Oracle BlockChain Platform) Console 에 접속하기
-   본인에게 할당된 IP 주소를 사용해서 아래와 같이 접속하면 Blockchain Platform 콘솔 화면에 접속할 수 있습니다.
+   본인에게 할당된 3개의 IP 주소 중 첫번째 IP를 사용해서 아래와 같이 접속하면 Blockchain Platform 콘솔 화면에 접속할 수 있습니다.
 
    http://**할당 받은 IP Address**:7070/console/
 
