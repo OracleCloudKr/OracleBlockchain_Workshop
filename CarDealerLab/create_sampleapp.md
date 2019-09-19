@@ -68,7 +68,11 @@ CarTrace 체인코드를 개발 한 후에는 보통 이를 호출하기 위한 
 이 Application은 자동차 부품과 자동차를 생성하는 API를 호출합니다. 또한 조회 및 다른 조직으로 Transfer를 수행하는 API를 호출하게 됩니다. 이 Application에서는 데이터 결과를 화면에 출력하기만 하고 실제 동작은 Chaincode에서 수행되게 됩니다.
 
 이 Application은 각 Blockchain workshop 인스턴스의 8000 포트로 접근할 수 있습니다.
+<pre><code>
+예:) http://62C57E2D8944EBB48B1E6C5A28A461.blockchain.ocp.oraclecloud.com:8000/
 
+주의: https 가 아니라 http로 접근하셔야 합니다. 
+</pre></code>
 ![](images/sample_webapp.png)
 
 ---
