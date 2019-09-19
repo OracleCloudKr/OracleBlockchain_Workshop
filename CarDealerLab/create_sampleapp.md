@@ -20,18 +20,21 @@ Body: {
 체인 코드가 업로드 되어 인스턴스화 되었으며 REST 게이트웨이를 통해 원격으로 호출 될 수 있으므로 체인 코드 기능을 호출하고 원장을 쿼리 할 수 있습니다. 원장은 현재 완전히 비어 있으므로 의미있는 데이터를 얻기 위해 장부에 샘플 데이터를 추가하도록 하겠습니다.
 
 이번 Lab에서는 Postman툴([다운로드](https://www.getpostman.com/apps))을 통해 REST API들을 자동화해서 호출하는 방식으로 하게 됩니다.
+1. Postman을 통해 REST URL을 호출을 하게 되는데, 이때 SSL을 통해 호출을 합니다. 본 Lab에서 사용하는 서버의 SSL인증서가 Test인증서로 되어 있기 때문에 호출도중 ssl 에러가 발생하게 됩니다. 이를 해결하기 위해 ssl verification을 체크하는 설정을 해제해야 합니다.
+   Postman의 Setting(메뉴에서 File->Settings(윈도우), 메뉴에서 Postman->Preferences(Mac)) 화면에서 다음과 같이 SSL certificate verification을 체크해제(OFF) 합니다.
+   ![](images/postman_setting.png)
 
-1. 먼저 DetroitAuto(Founder)의 Nodes 탭에서 REST Proxy주소를 복사해 둡니다. 
+2. 먼저 DetroitAuto(Founder)의 Nodes 탭에서 REST Proxy주소를 복사해 둡니다. 
    아래 그림에서 https://를 제외한 가운데 붉은색으로 표시된 부분만 복사를 합니다. 
     ![](images/restapi_url.png)
 
-2. 데이터를 초기화하는 Postman 스크립트 파일은 아래의 주소에서 로컬 컴퓨터에 다운로드 합니다.
+3. 데이터를 초기화하는 Postman 스크립트 파일은 아래의 주소에서 로컬 컴퓨터에 다운로드 합니다.
 
     [OBP_Workshop.postman_collection.json](https://github.com/OracleCloudKr/OracleBlockchain_Workshop/raw/master/CarDealerLab/artifacts/OBP_Workshop.postman_collection.json)
 
     [OBP_WORKSHOP_ENV.postman_environment.json](https://github.com/OracleCloudKr/OracleBlockchain_Workshop/raw/master/CarDealerLab/artifacts/OBP_WORKSHOP_ENV.postman_environment.json)
 
-3. 위 2개의 json 파일 중 OBP_WORKSHOP_ENV.postman_environment.json을 여십시오.
+4. 위 2개의 json 파일 중 OBP_WORKSHOP_ENV.postman_environment.json을 여십시오.
     그 중에서 아래에 value중 굵게 표시된 부분을 각자의 환경에 맞도록 수정합니다.
     <pre>
     <code>
@@ -43,11 +46,11 @@ Body: {
         },
     </code>
     </pre>
-4. 먼저 Postman을 실행한 후 import 버튼을 눌러 창을 띄우고, 위 두 개의 파일을 import 합니다.
+5. 먼저 Postman을 실행한 후 import 버튼을 눌러 창을 띄우고, 위 두 개의 파일을 import 합니다.
 
     ![](images/initledger1.png)
 
-5. 오른쪽 상단의 OBP_WORKSHOP_ENV 를 선택해서 환경파일을 적용합니다.
+6. 오른쪽 상단의 OBP_WORKSHOP_ENV 를 선택해서 환경파일을 적용합니다.
    아래 그림과 같이 OBP_Workshop이라고 하는 Collection이 만들어지고 Http Requests들이 모두 import 된 것을 확인합니다. 이 요청들을 모두 실행하기 위해 왼쪽 상단에 있는 Runner 버튼을 누릅니다.
 ![](images/initledger2.png)
 
